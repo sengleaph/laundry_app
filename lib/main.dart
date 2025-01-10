@@ -11,8 +11,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: OpenScreen(),
+     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          color: Colors.white, // Fixed white color
+          elevation: 0, // No shadow
+          iconTheme: IconThemeData(color: Colors.black), // Black icons
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        scaffoldBackgroundColor: Colors.white, // Consistent scaffold background
+      ),
+      home: const OpenScreen(),
     );
   }
 }

@@ -36,7 +36,7 @@ class _ScheduleOrderScreenState extends State<ScheduleOrderScreen> {
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.height * 0.08,
         elevation: 0,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -198,12 +198,12 @@ class _ScheduleOrderScreenState extends State<ScheduleOrderScreen> {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(left: 16, right: 16, bottom: 25),
+        padding: const EdgeInsets.only(left: 16, right: 16, bottom: 40),
         child: SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {
-              // Navigator.push(context, MaterialPageRoute(builder: (context) => CheckoutScreen()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => CheckoutScreen()));
               if (selectedDate == null) {
                 // Handle no date selected
                 ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
@@ -217,7 +217,7 @@ class _ScheduleOrderScreenState extends State<ScheduleOrderScreen> {
                 print('Note: ${noteController.text}');
               }
             },
-            child: const Text('Continue'),
+            child: const Text('Continue', style: TextStyle(color: Colors.white)),
             style: ElevatedButton.styleFrom(
               backgroundColor: primaryColor,
               padding: const EdgeInsets.symmetric(vertical: 16),

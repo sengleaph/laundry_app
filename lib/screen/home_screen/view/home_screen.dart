@@ -53,11 +53,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       // overlayColor: MaterialStateProperty.all(Colors.transparent),
-      backgroundColor: Colors.white, // Ensure this variable is defined
+      backgroundColor: Colors.white,// Ensure this variable is defined
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.height * 0.08,
         elevation: 0,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),

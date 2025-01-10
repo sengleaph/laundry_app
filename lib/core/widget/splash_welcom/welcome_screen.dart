@@ -40,17 +40,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: MediaQuery.of(context).size.height * .1,
-            child: const Center(
-              child: Text(
-                'Spin & Shine',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * .1,
+              child: const Center(
+                child: Text(
+                  'Spin & Shine',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),),
+            ),
             SizedBox(
               height: MediaQuery.of(context).size.height * .60,
               child: Expanded(
@@ -82,7 +84,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ],
               ),
             ),
-           Padding(
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
               child: ElevatedButton(
                 onPressed: () {
@@ -90,19 +92,23 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const HomeScreen(), // Change to your home screen
+                      builder: (context) =>
+                          const HomeScreen(), // Change to your home screen
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Theme.of(context).primaryColor, // Updated from primary
+                  backgroundColor:
+                      primaryColor, // Updated from primary
                   minimumSize: const Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
                   ),
                 ),
                 child: Text(
-                  _currentPage == welcomeData.length - 1 ? 'Get Started' : 'Next',
+                  _currentPage == welcomeData.length - 1
+                      ? 'Get Started'
+                      : 'Next',
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -110,7 +116,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
               ),
-            ),            SizedBox(height: 20),
+            ),
+            SizedBox(height: 20),
           ],
         ),
       ),
@@ -124,7 +131,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       height: 6,
       width: _currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-        color: _currentPage == index ? Colors.blue : Colors.grey,
+        color: _currentPage == index ? primaryColor : Colors.grey,
         borderRadius: BorderRadius.circular(3),
       ),
     );

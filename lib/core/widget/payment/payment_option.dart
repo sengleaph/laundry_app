@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class PaymentOption extends StatelessWidget {
   final String title;
   final String description;
-  final Image image;
+  final Image image; // Accepts an Image widget for the icon
   final Color color;
 
   const PaymentOption({
@@ -20,7 +20,7 @@ class PaymentOption extends StatelessWidget {
       padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(5),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.shade200,
@@ -32,9 +32,17 @@ class PaymentOption extends StatelessWidget {
       ),
       child: Row(
         children: [
-          CircleAvatar(
-            backgroundColor: color,
-            child: Icon(image, color: Colors.white),
+          Container(
+            width: 50, // Set width and height for the image container
+            height: 50,
+            decoration: BoxDecoration(
+              color: color,
+              shape: BoxShape.circle,
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: image, // Display the provided image
+            ),
           ),
           SizedBox(width: 16),
           Column(

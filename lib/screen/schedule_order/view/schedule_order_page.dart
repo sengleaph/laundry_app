@@ -203,7 +203,7 @@ class _ScheduleOrderScreenState extends State<ScheduleOrderScreen> {
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => CheckoutScreen()));
+              // Navigator.push(context, MaterialPageRoute(builder: (context) => CheckoutScreen()));
               if (selectedDate == null) {
                 // Handle no date selected
                 ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
@@ -219,7 +219,7 @@ class _ScheduleOrderScreenState extends State<ScheduleOrderScreen> {
             },
             child: const Text('Continue'),
             style: ElevatedButton.styleFrom(
-              primary: primaryColor,
+              backgroundColor: primaryColor,
               padding: const EdgeInsets.symmetric(vertical: 16),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50),

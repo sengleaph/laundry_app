@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_app/core/utils/color/color.dart';
+import 'package:laundry_app/screen/bulky_items/view/bulky_items.dart';
+import 'package:laundry_app/screen/dry_cleaning/view/dry_cleaning.dart';
+import 'package:laundry_app/screen/duvets/view/duvets.dart';
 import 'package:laundry_app/screen/home_screen/view/widget/promotion_cart.dart';
+import 'package:laundry_app/screen/shoes_other/view/shoes_and_other.dart';
 
-import '../../schedule_order/view/schedule_order_page.dart';
+import '../../wash_and_iron/view/wash_and_iron.dart';
 import '../../wash/view/washing_page.dart'; // Ensure this path is correct
 
 class HomeScreen extends StatefulWidget {
@@ -43,10 +47,10 @@ class _HomeScreenState extends State<HomeScreen> {
   List navigating = [
     const WashingPage(),
     ScheduleOrderScreen(), // Add corresponding pages here
-    null, // Add corresponding pages here
-    null, // Add corresponding pages here
-    null, // Add corresponding pages here
-    null, // Add corresponding pages here
+    DryCleaning(), // Add corresponding pages here
+    BulkyItems(), // Add corresponding pages here
+    Duvets(), // Add corresponding pages here
+    ShoesAndOther(), // Add corresponding pages here
   ];
 
   @override

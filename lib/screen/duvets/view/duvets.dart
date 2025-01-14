@@ -4,15 +4,15 @@ import 'package:intl/intl.dart';
 import '../../../core/utils/color/color.dart';
 import '../../check_out/view/check_out_page.dart';
 
-class WashingPage extends StatefulWidget {
-  const WashingPage({ Key? key }) : super(key: key);
+class Duvets extends StatefulWidget {
+  const Duvets({ Key? key }) : super(key: key);
 
   @override
-  _WashingPageState createState() => _WashingPageState();
+  _DuvetsState createState() => _DuvetsState();
 }
 
-class _WashingPageState extends State<WashingPage> {
-  String serviceType = 'Delivery pick up'; // Default selected service
+class _DuvetsState extends State<Duvets> {
+    String serviceType = 'Delivery pick up'; // Default selected service
   String productReadyOption = 'In door delivery'; // Default selected option
   DateTime? selectedDate; // Stores the selected date
   TextEditingController noteController = TextEditingController();

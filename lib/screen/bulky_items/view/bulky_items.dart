@@ -4,15 +4,15 @@ import 'package:intl/intl.dart';
 import '../../../core/utils/color/color.dart';
 import '../../check_out/view/check_out_page.dart';
 
-class WashingPage extends StatefulWidget {
-  const WashingPage({ Key? key }) : super(key: key);
+class BulkyItems extends StatefulWidget {
+  const BulkyItems({ Key? key }) : super(key: key);
 
   @override
-  _WashingPageState createState() => _WashingPageState();
+  _BulkyItemsState createState() => _BulkyItemsState();
 }
 
-class _WashingPageState extends State<WashingPage> {
-  String serviceType = 'Delivery pick up'; // Default selected service
+class _BulkyItemsState extends State<BulkyItems> {
+   String serviceType = 'Delivery pick up'; // Default selected service
   String productReadyOption = 'In door delivery'; // Default selected option
   DateTime? selectedDate; // Stores the selected date
   TextEditingController noteController = TextEditingController();
@@ -95,7 +95,7 @@ class _WashingPageState extends State<WashingPage> {
               ),
               const TextField(
                 decoration: InputDecoration(
-                  hintText: 'Wash Only',
+                  hintText: 'Bulky Items',
                   border: OutlineInputBorder(),
                 ),
               ),

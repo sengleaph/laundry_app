@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:laundry_app/core/utils/color/color.dart';
 
+import '../../../core/widget/map/map_sreen.dart';
 import '../../check_out/view/check_out_page.dart'; // Add this for date formatting
 
 class ScheduleOrderScreen extends StatefulWidget {
@@ -65,8 +66,8 @@ class _ScheduleOrderScreenState extends State<ScheduleOrderScreen> {
               ),
               const SizedBox(height: 4),
               TextButton(
-                onPressed: () {
-                  // Change location logic
+               onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => MapScreen()));
                 },
                 child: const Text(
                   'Change Location',

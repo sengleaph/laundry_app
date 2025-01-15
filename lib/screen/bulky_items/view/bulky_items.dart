@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../../../core/utils/color/color.dart';
+import '../../../core/widget/map/map_sreen.dart';
 import '../../check_out/view/check_out_page.dart';
 
 class BulkyItems extends StatefulWidget {
@@ -67,8 +68,8 @@ class _BulkyItemsState extends State<BulkyItems> {
               ),
               const SizedBox(height: 4),
               TextButton(
-                onPressed: () {
-                  // Change location logic
+               onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => MapScreen()));
                 },
                 child: const Text(
                   'Change Location',

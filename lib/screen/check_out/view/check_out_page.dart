@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:laundry_app/core/utils/color/color.dart';
 
 import '../../../core/widget/payment/payment_option.dart';
+import '../../driver_pickup/view/washing_page.dart';
 
 class CheckoutScreen extends StatelessWidget {
   const CheckoutScreen({super.key});
@@ -163,7 +164,7 @@ class CheckoutScreen extends StatelessWidget {
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {
-              // Checkout button logic
+              Navigator.push(context, MaterialPageRoute(builder: (context) => DriverPickupScreen()));
             },
             child: Text('Checkout',
                 style: TextStyle(

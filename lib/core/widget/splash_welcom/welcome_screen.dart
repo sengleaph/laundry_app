@@ -55,20 +55,18 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * .60,
-              child: Expanded(
-                child: PageView.builder(
-                  controller: _pageController,
-                  onPageChanged: (value) {
-                    setState(() {
-                      _currentPage = value;
-                    });
-                  },
-                  itemCount: welcomeData.length,
-                  itemBuilder: (context, index) => WelcomePage(
-                    title: welcomeData[index]["title"]!,
-                    text: welcomeData[index]["text"]!,
-                    image: welcomeData[index]["image"]!,
-                  ),
+              child: PageView.builder(
+                controller: _pageController,
+                onPageChanged: (value) {
+                  setState(() {
+                    _currentPage = value;
+                  });
+                },
+                itemCount: welcomeData.length,
+                itemBuilder: (context, index) => WelcomePage(
+                  title: welcomeData[index]["title"]!,
+                  text: welcomeData[index]["text"]!,
+                  image: welcomeData[index]["image"]!,
                 ),
               ),
             ),
@@ -79,7 +77,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 children: [
                   ...List.generate(
                     welcomeData.length,
-                    (index) => buildDot(index: index),
+                        (index) => buildDot(index: index),
                   ),
                 ],
               ),
@@ -88,18 +86,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
               child: ElevatedButton(
                 onPressed: () {
-                  // Replace with your actual next screen
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                          const HomeScreen(), // Change to your home screen
+                      builder: (context) => const HomeScreen(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor:
-                      primaryColor, // Updated from primary
+                  backgroundColor: primaryColor,
                   minimumSize: const Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
@@ -117,7 +112,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
           ],
         ),
       ),
@@ -126,8 +121,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
   AnimatedContainer buildDot({required int index}) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 200),
-      margin: EdgeInsets.only(right: 5),
+      duration: const Duration(milliseconds: 200),
+      margin: const EdgeInsets.only(right: 5),
       height: 6,
       width: _currentPage == index ? 20 : 6,
       decoration: BoxDecoration(

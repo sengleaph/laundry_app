@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:laundry_app/core/utils/color/color.dart';
 
 import '../../../core/widget/payment/payment_option.dart';
-import '../../driver_pickup/view/washing_page.dart';
+import '../../driver_pickup/view/driver_pickup.dart';
 
 class CheckoutScreen extends StatelessWidget {
   const CheckoutScreen({super.key});

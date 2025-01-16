@@ -95,34 +95,33 @@ class _MapScreenState extends State<MapScreen> {
           });
         },
       ),
-     floatingActionButton: Column(
-  mainAxisSize: MainAxisSize.min,
-  children: [
-    // Button to zoom in
-    FloatingActionButton(
-      onPressed: () {
-        _mapController?.animateCamera(CameraUpdate.zoomIn());
-      },
-      child: const Icon(Icons.zoom_in),
-      heroTag: 'zoom_in',
-    ),
-    const SizedBox(height: 8),
-    // Button to zoom out
-    FloatingActionButton(
-      onPressed: () {
-        _mapController?.animateCamera(CameraUpdate.zoomOut());
-      },
-      child: const Icon(Icons.zoom_out),
-      heroTag: 'zoom_out',
-    ),
-    const SizedBox(height: 8),
-    FloatingActionButton(
-        onPressed: _requestPermissionAndGetLocation,
-        child: const Icon(Icons.my_location),
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          // Button to zoom in
+          FloatingActionButton(
+            onPressed: () {
+              _mapController?.animateCamera(CameraUpdate.zoomIn());
+            },
+            child: const Icon(Icons.zoom_in),
+            heroTag: 'zoom_in',
+          ),
+          const SizedBox(height: 8),
+          // Button to zoom out
+          FloatingActionButton(
+            onPressed: () {
+              _mapController?.animateCamera(CameraUpdate.zoomOut());
+            },
+            child: const Icon(Icons.zoom_out),
+            heroTag: 'zoom_out',
+          ),
+          const SizedBox(height: 8),
+          FloatingActionButton(
+            onPressed: _requestPermissionAndGetLocation,
+            child: const Icon(Icons.my_location),
+          ),
+        ],
       ),
-  ],
-),
-
     );
   }
 

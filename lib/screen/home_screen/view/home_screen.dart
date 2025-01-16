@@ -6,6 +6,7 @@ import 'package:laundry_app/screen/duvets/view/duvets.dart';
 import 'package:laundry_app/screen/home_screen/view/widget/promotion_cart.dart';
 import 'package:laundry_app/screen/shoes_other/view/shoes_and_other.dart';
 
+import '../../profile/profile_page.dart';
 import '../../wash_and_iron/view/wash_and_iron.dart';
 import '../../wash/view/washing_page.dart'; // Ensure this path is correct
 
@@ -57,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       // overlayColor: MaterialStateProperty.all(Colors.transparent),
-      backgroundColor: Colors.white,// Ensure this variable is defined
+      backgroundColor: Colors.white, // Ensure this variable is defined
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.height * 0.08,
         elevation: 0,
@@ -70,11 +71,21 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Row(
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: Image.asset(
-                      'assets/images/boy.png',
-                      height: 40,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProfileScreen(),
+                        ),
+                      );
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'assets/images/boy.png',
+                        height: 40,
+                      ),
                     ),
                   ),
                   const SizedBox(width: 12),

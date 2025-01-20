@@ -45,11 +45,17 @@ class ProfileScreen extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(50),
                     ),
-                    child: ClipRRect(
+                    child: Container(
+                      margin: const EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(50),
-                        child: Image.asset(
-                          "assets/images/boy.png",
-                        ),),
+                        image: const DecorationImage(
+                          image: AssetImage("assets/images/boy.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                   ),
                   const SizedBox(width: 16),
                   // Name and Address

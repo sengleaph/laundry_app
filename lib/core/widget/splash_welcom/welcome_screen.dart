@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundry_app/screen/authentication/login_page/login_page.dart';
 
 import '../../../screen/home_screen/view/home_screen.dart';
 import '../../utils/color/color.dart';
@@ -89,7 +90,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const HomeScreen(),
+                      builder: (context) =>  LoginScreen(),
                     ),
                   );
                 },

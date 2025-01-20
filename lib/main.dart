@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_app/core/widget/splash_welcom/open_screen.dart';
 
+import 'screen/authentication/login_page/login_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -26,7 +28,8 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Colors.white, // Consistent scaffold background
       ),
-      home: const OpenScreen(),
+      // home: const OpenScreen(),
+      home: OpenScreen(),
     );
   }
 }
